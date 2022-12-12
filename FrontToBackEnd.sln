@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontToBackEnd.Web", "FrontToBackEnd.Web\FrontToBackEnd.Web.csproj", "{21B321E6-68D3-413B-BB65-960B9F61160D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontToBackEnd.Web", "FrontToBackEnd.Web\FrontToBackEnd.Web.csproj", "{21B321E6-68D3-413B-BB65-960B9F61160D}"
 	ProjectSection(ProjectDependencies) = postProject
-		{B1392C60-6722-467C-852E-B58C94D76208} = {B1392C60-6722-467C-852E-B58C94D76208}
+		{370412E9-57BF-45B8-BD6C-4DA0BBDAE5D7} = {370412E9-57BF-45B8-BD6C-4DA0BBDAE5D7}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8DBB5FF8-511D-4DEB-BEB2-83CFDC233E93}"
@@ -13,17 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontToBackEnd.Domain", "FrontToBackEnd.Domain\FrontToBackEnd.Domain.csproj", "{193596AB-989B-42B9-98ED-B872FD137040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontToBackEnd.Domain", "FrontToBackEnd.Domain\FrontToBackEnd.Domain.csproj", "{193596AB-989B-42B9-98ED-B872FD137040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontToBackEnd.Application", "FrontToBackEnd.Application\FrontToBackEnd.Application.csproj", "{B1392C60-6722-467C-852E-B58C94D76208}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontToBackEnd.Application", "FrontToBackEnd.Application\FrontToBackEnd.Application.csproj", "{B1392C60-6722-467C-852E-B58C94D76208}"
 	ProjectSection(ProjectDependencies) = postProject
 		{193596AB-989B-42B9-98ED-B872FD137040} = {193596AB-989B-42B9-98ED-B872FD137040}
-		{370412E9-57BF-45B8-BD6C-4DA0BBDAE5D7} = {370412E9-57BF-45B8-BD6C-4DA0BBDAE5D7}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontToBackEnd.Infrastructure", "FrontToBackEnd.Infrastructure\FrontToBackEnd.Infrastructure.csproj", "{370412E9-57BF-45B8-BD6C-4DA0BBDAE5D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontToBackEnd.Infrastructure", "FrontToBackEnd.Infrastructure\FrontToBackEnd.Infrastructure.csproj", "{370412E9-57BF-45B8-BD6C-4DA0BBDAE5D7}"
 	ProjectSection(ProjectDependencies) = postProject
 		{193596AB-989B-42B9-98ED-B872FD137040} = {193596AB-989B-42B9-98ED-B872FD137040}
+		{B1392C60-6722-467C-852E-B58C94D76208} = {B1392C60-6722-467C-852E-B58C94D76208}
 	EndProjectSection
 EndProject
 Global
