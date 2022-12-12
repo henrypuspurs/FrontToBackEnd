@@ -7,6 +7,14 @@ public class HtmlPageBuilder
 {
     private readonly string _doctype = "<!DOCTYPE html>";
     private HtmlPage _page = new();
+    private string _styles = String.Empty;
+
+    public HtmlPageBuilder WithStyle(string stylesheet)
+    {
+        _styles = $"<link rel=\"stylesheet\" href=\"{stylesheet}\" />";
+
+        return this;
+    }
 
     public HtmlPageBuilder WithHeading(string heading)
     {
@@ -19,6 +27,7 @@ public class HtmlPageBuilder
     public HtmlPage Build()
     {
         _page.Content = _page.Content.Surround(HtmlTags.Body);
+        _page.Content = _page.Content.Prepend($"<head>{_styles}</head>");
         _page.Content = _page.Content.Surround(HtmlTags.Html);
         _page.Content = _page.Content.Prepend(_doctype);
         return _page;
