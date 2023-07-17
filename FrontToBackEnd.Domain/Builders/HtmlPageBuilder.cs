@@ -24,15 +24,15 @@ public class HtmlPageBuilder
         return this;
     }
 
-    public HtmlPageBuilder WithHeading(string heading)
+    public HtmlPageBuilder WithHeading(string heading, string? inlineStyle = null)
     {
-        heading = heading.Surround(HtmlTags.H1);
+        heading = heading.Surround(HtmlTags.H1).InsertStyle(inlineStyle);
         _page.Content = _page.Content.Append(heading);
 
         return this;
     }
 
-    public HtmlPageBuilder WithParagraph(string paragraph)
+    public HtmlPageBuilder WithParagraph(string paragraph, string? inlineStyle = null)
     {
         paragraph = paragraph.Surround(HtmlTags.P);
         _page.Content = _page.Content.Append(paragraph);
@@ -40,7 +40,7 @@ public class HtmlPageBuilder
         return this;
     }
 
-    public HtmlPageBuilder WithDiv(string div)
+    public HtmlPageBuilder WithDiv(string div, string? inlineStyle = null)
     {
         div = div.Surround(HtmlTags.Div);
         _page.Content = _page.Content.Append(div);
@@ -48,7 +48,7 @@ public class HtmlPageBuilder
         return this;
     }
 
-    public HtmlPageBuilder WithSpan(string span)
+    public HtmlPageBuilder WithSpan(string span, string? inlineStyle = null)
     {
         span = span.Surround(HtmlTags.Span);
         _page.Content = _page.Content.Append(span);
