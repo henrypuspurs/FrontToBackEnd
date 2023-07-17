@@ -9,6 +9,7 @@ public class BasePageHandler
     {
         var page = new HtmlPageBuilder()
             .WithStyle("https://localhost:1337/styles")
+            .WithScript("https://localhost:1337/scripts")
             .WithHeading("This is a heading!")
             .Build();
 

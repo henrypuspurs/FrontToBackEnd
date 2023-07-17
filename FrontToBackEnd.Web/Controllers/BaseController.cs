@@ -13,4 +13,8 @@ public class BaseController : ControllerBase
     [HttpGet, Route("styles")]
     public async Task<ContentResult> GetStyles([FromServices] BaseStylesHandler handler)
         => ResultBuilder.BuildContentResult(await handler.Handle());
+
+    [HttpGet, Route("scripts")]
+    public async Task<ContentResult> GetScripts([FromServices] BaseScriptsHandler handler)
+        => ResultBuilder.BuildContentResult(await handler.Handle());
 }

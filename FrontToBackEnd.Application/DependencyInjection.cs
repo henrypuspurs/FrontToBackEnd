@@ -8,6 +8,7 @@ public static class DependencyInjection
     {
         services.AddTransient<BasePageHandler>();
         services.AddTransient<BaseStylesHandler>();
+        services.AddTransient<BaseScriptsHandler>();
 
         return services;
     }
