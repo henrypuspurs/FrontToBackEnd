@@ -5,8 +5,8 @@ using FrontToBackEnd.Domain.Extensions;
 namespace FrontToBackEnd.Domain.Builders;
 public class HtmlPageBuilder
 {
-    private readonly string _doctype = "<!DOCTYPE html>";
-    private HtmlPage _page = new();
+    private const string Doctype = "<!DOCTYPE html>";
+    private readonly HtmlPage _page = new();
     private string _styles = String.Empty;
     private string _scripts = String.Empty;
 
@@ -61,7 +61,7 @@ public class HtmlPageBuilder
         _page.Content = _page.Content.Surround(HtmlTags.Body);
         _page.Content = _page.Content.Prepend($"<head>{_styles}{_scripts}</head>");
         _page.Content = _page.Content.Surround(HtmlTags.Html);
-        _page.Content = _page.Content.Prepend(_doctype);
+        _page.Content = _page.Content.Prepend(Doctype);
         return _page;
     }
 }

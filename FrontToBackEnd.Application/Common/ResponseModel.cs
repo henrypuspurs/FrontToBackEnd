@@ -17,7 +17,7 @@ public record ResponseModel(int StatusCode, string Message = null)
 
     public static ResponseModel InternalServerError(string message = null) => new(500, message);
 
-    public static ResponseModel<T> Ok<T>(T Content, string message = null) => new(200, Content, message);
+    public static ResponseModel<T> Ok<T>(T content, string message = null) => new(200, content, message);
 
     public static ResponseModel<T> Created<T>(string message = null) => new(201, default, message);
 
